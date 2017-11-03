@@ -12,5 +12,8 @@ class GuessTest < Minitest::Test
     assert_equal "Juneau", guess.response
     assert_equal true, guess.correct?
     assert_equal "Correct!", guess.feedback
+    # This is great, but when you test for something like this correct?
+    # method also test to make sure that it does the false thing as well
+    # this way, youre covering both sides of its expected behavior
   end
 end

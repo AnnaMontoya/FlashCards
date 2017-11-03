@@ -40,6 +40,9 @@ class FlashCardRunner
 
 end
 
+# what input are you collecting from the user here?
+# What are you doing with it?
+#
 input = gets.chomp
 flashcard_runner = FlashCardRunner.new(input)
 flashcard_runner.start
