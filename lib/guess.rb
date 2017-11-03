@@ -11,9 +11,10 @@ class Guess
   end
 
   def feedback
-    if @response == card.answer
+    if correct?
       p "Correct!"
-    else p "Incorrect!"
+    else
+      p "Incorrect!"
     end
   end
 

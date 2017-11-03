@@ -78,6 +78,8 @@ class RoundTest < Minitest::Test
      round.record_guess("2")
      round.new_card
 
+     # I think somewhere along the line you thought new_card was current_card?
+     # Be careful to make sure you are doing exactly what the spec asks you to.
      assert_instance_of Guess, round.record_guess("2")
      assert_equal 2, round.guesses.count
      assert_equal "Incorrect!", round.guesses.first.feedback
@@ -91,6 +93,7 @@ class RoundTest < Minitest::Test
     round  = Round.new(deck)
 
     round.record_guess("Juneau")
+    # Look at the spec for Iteration 4 a bit more closely.
     round.new_card
     round.record_guess("2")
     round.new_card
